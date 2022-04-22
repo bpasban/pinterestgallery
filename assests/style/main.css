@@ -1,0 +1,1436 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    direction: ltr;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+    /**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+    audio:not([controls]) {
+        display: none;
+        height: 0;
+    }
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible; /* 4 */
+}
+
+    /**
+ * Re-set default cursor for disabled elements.
+ */
+
+    button[disabled],
+    html input[disabled] {
+        cursor: default;
+    }
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+    /**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+/*********************************************/
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.39) #fff;
+}
+
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 12px;
+        height: 12px; /* height of horizontal scrollbar ← You're missing this */
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.39);
+        border-radius: 50px;
+        border: 3px solid #fff;
+    }
+
+header {
+    position: relative;
+    background-color: #fff;
+    margin:0 -10px !important
+}
+
+
+
+header {
+    position: relative;
+    background-color: #fff;
+}
+
+    header.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+        box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+        -webkit-box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+        -moz-box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+    }
+
+    header a i {
+        font-size: 25px;
+    }
+
+    header div.home {
+        color: #e60023 !important;
+        font-size: 21px;
+    }
+
+        header div.home p {
+            color: #222 !important;
+            font-size: 17px;
+            font-weight: 600;
+            padding-left: 15px;
+        }
+
+    header ul.navigation li a {
+        color: #767676 !important
+    }
+
+    header ul.navigation li:nth-child(3) a {
+        position: relative;
+    }
+
+        header ul.navigation li:nth-child(3) a p {
+            position: absolute;
+            top: -10px;
+            right: -30px;
+            background-color: #e60023;
+            color: #fff;
+            padding: 3px 7px !important;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+
+    header div#search a.clear {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 21px;
+        color: #9e9e9e;
+        display: none;
+        cursor: pointer;
+        color: #e60023;
+        z-index: 9
+    }
+
+        header div#search a.clear i {
+            left: unset;
+            color: #e60023
+        }
+
+    header div#search i {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 21px;
+        color: #9e9e9e;
+    }
+
+    header div#search input[type=search] {
+        width: calc(100% - 100px);
+        padding: 0 50px 0 50px !important;
+        height: 50px;
+        background-color: #efefef;
+        border: none;
+        border-radius: 50px;
+        z-index: 4;
+    }
+
+        header div#search input[type=search]::placeholder {
+            padding-left: 0px;
+            color: #9e9e9e;
+        }
+
+    header div#search {
+        position: relative;
+    }
+
+    header div.search-expand {
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        width: 100%;
+        z-index: 3;
+        padding: 20px;
+        border-radius: 0 0 25px 25px;
+        display: none !important;
+    }
+
+        header div.search-expand h4 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        header div.search-expand.show {
+            display: unset !important;
+        }
+
+        header div.search-expand ul {
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+
+            header div.search-expand ul li img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* or object-fit: contain; */
+                -webkit-transform: scale(1,1);
+                -webkit-transition: all 0.5s ease-in-out;
+            }
+
+            header div.search-expand ul li {
+                width: 100%;
+                height: 96px;
+                overflow: hidden;
+                position: relative;
+                background-color: #9e9e9e;
+                margin: 1%;
+                border-radius: 17px;
+                padding: 0 !important;
+            }
+
+            header div.search-expand ul.ideas li::before,
+            header div.search-expand ul.commoncolors li::before {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                z-index: 2;
+                background-color: rgba(0, 0, 0, 0.39)
+            }
+
+            header div.search-expand ul.ideas li:hover {
+                cursor: pointer;
+            }
+
+                header div.search-expand ul.ideas li:hover img {
+                    cursor: pointer;
+                    -webkit-transform: scale(1.1,1.1);
+                    -webkit-transition: all 0.5s ease-in-out;
+                }
+
+            header div.search-expand ul.ideas li a, header div.search-expand ul.commoncolors li a {
+                z-index: 5;
+                display: inline-block
+            }
+
+            header div.search-expand ul li a {
+                width: 100%;
+                z-index: 2;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                color: #fff !important;
+                font-weight: 500;
+                display: contents;
+            }
+
+            header div.search-expand ul.commoncolors li {
+                cursor: pointer;
+                width: auto !important;
+                max-width: 125px;
+                height: 50px;
+                overflow: hidden;
+                position: relative;
+                margin: 1% 0.3%;
+                border-radius: 5px;
+                padding: 10px 20px !important;
+            }
+
+            header div.search-expand ul.result {
+                max-height: 400px;
+                overflow-y: scroll;
+            }
+
+                header div.search-expand ul.result li {
+                    background-color: unset;
+                    text-align: left !important;
+                    height: auto;
+                    padding: 20px !important;
+                    font-size: 13px;
+                    font-weight: 300;
+                    border-radius: 0 !important;
+                }
+
+                    header div.search-expand ul.result li a {
+                        color: #222 !important;
+                        text-align: left;
+                    }
+
+                    header div.search-expand ul.result li h5 {
+                        font-weight: 500;
+                        font-size: 21px;
+                        margin-bottom: 10px;
+                    }
+
+                    header div.search-expand ul.result li p {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                        header div.search-expand ul.result li p mark {
+                            background-color: unset;
+                            font-weight: 600;
+                        }
+
+    header div.bgoverlay {
+        position: fixed;
+        z-index: 2;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.39)
+    }
+
+    header a.followbtnlg {
+        background-color: #e60023;
+        color: #fff !important;
+        border-radius: 25px;
+        padding: 5px 30px;
+        font-weight: 500;
+        display: inline-block;
+        border: solid 1px #e1e1e1;
+        cursor: pointer;
+        max-width: 100px;
+        line-height: 28px;
+    }
+
+    header a.more i {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        display: inline-block;
+    }
+
+    header a.back i {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        display: inline-block;
+    }
+
+    header a.more, header a.back {
+        font-size: 21px;
+        background-color: #efefef;
+        margin: 0 10px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    header a.back {
+        background-color: unset
+    }
+
+        header a.more i, header a.back i {
+            /*position: absolute;*/
+            line-height: 35px;
+        }
+
+.infoBoard {
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+    line-height: 24px;
+}
+
+    .infoBoard h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin: 20px auto;
+    }
+
+    .infoBoard h3 {
+        font-weight: 600;
+    }
+
+    .infoBoard h1 a {
+        font-size: 21px;
+        background-color: #efefef;
+        margin: 0 10px;
+        width: 38px;
+        height: 38px;
+        line-height: 40px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        .infoBoard h1 a i {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            display: inline-block;
+        }
+
+    .infoBoard h6 {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    .infoBoard div.logo {
+        width: auto;
+        display: inline-block;
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+    }
+
+        .infoBoard div.logo img {
+            width: 80px;
+            height: 80px;
+            margin-top: 10px;
+        }
+
+        .infoBoard div.logo:before {
+            position: absolute;
+            content: '';
+            background: rgba(233, 233, 233,0.50);
+            width: 100px;
+            height: 100px;
+            pointer-events: none;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+        }
+
+    .infoBoard a.followbtn {
+        background-color: #efefef;
+        color: #414141;
+        border-radius: 5px;
+        padding: 5px 30px;
+        margin: 10px auto 20px auto;
+        font-weight: 500;
+        display: inline-block;
+        border: solid 1px #e1e1e1;
+        cursor: pointer;
+        max-width: 100px;
+    }
+
+
+    .infoBoard a:hover {
+        background-color: #e1e1e1 !important;
+    }
+
+.infoBoard {
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+    .content .pin {
+        width: calc(16.66666666% - 10px);
+        height: auto;
+        margin: 5px 5px 30px 5px;
+        /*padding: 20px !important;*/
+        color: #6b7074;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 15px;
+        border: solid 1px #dadada;
+        -webkit-transition: border 500ms ease-out;
+        -moz-transition: border 500ms ease-out;
+        -o-transition: border 500ms ease-out;
+        transition: border 500ms ease-out;
+        position: absolute;
+    }
+
+        .content .pin.loaded img {
+            /*min-height:unset;*/
+            opacity: 1;
+            transition: opacity 0.3s;
+            -webkit-transition: opacity 0.3s;
+        }
+
+        .content .pin img {
+            width: 100%;
+            border-radius: 15px;
+            transition: opacity 0.3s;
+            -webkit-transition: opacity 0.3s;
+            opacity: 0.2;
+            cursor: zoom-in;
+            /*min-height: 330px;*/
+            /*height: 100%;*/
+        }
+
+        .content .pin p {
+            font-weight: 600;
+            font-size: 15px;
+            color: #000;
+            line-height: normal;
+            margin: 20px 10px;
+        }
+
+        .content .pin img.lazy-image {
+            min-height: 30vh;
+        }
+
+        .content .pin a#commoncolor {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+.pin ul.tags {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 10px;
+    padding-bottom:10px;
+}
+
+    .pin ul.tags li {
+        display: inline-block;
+        clear: both;
+        padding: 5px 10px;
+        border-radius: 30px;
+        margin: 2px;
+        background-color: #efefef;
+        color: #222;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+        .pin ul.tags li:hover {
+            background-color: #dadada;
+        }
+
+.pin div.outerimg {
+    position: relative;
+}
+
+.pin div.options {
+    background-color: rgba(34, 34, 34, 0.40);
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 15px;
+    cursor: zoom-in;
+}
+
+.pin div.showoptions div.options {
+    display: unset;
+}
+
+.pin div.options .boards {
+    width: auto;
+    margin: 20px 10px;
+    text-align: left;
+    font-size: 15px;
+    background-color: #fff;
+    padding: 7px 0px 7px 30px;
+    height: auto;
+    line-height: 24px;
+    border-radius: 19px;
+    position: relative;
+}
+
+    .pin div.options .boards:hover {
+        cursor: auto;
+    }
+
+    .pin div.options .boards a, .pin div.options .boards i {
+        cursor: pointer
+    }
+
+    .pin div.options .boards i {
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        font-size: 23px;
+    }
+
+    .pin div.options .boards a {
+        background-color: #e60023;
+        color: #fff;
+        font-weight: 500;
+        font-size: 19px;
+        border-radius: 19px;
+        padding: 7px 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+.pin div.options div.bottom-option {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    font-size: 15px;
+    text-align: right;
+}
+
+    .pin div.options div.bottom-option a {
+        color: #222;
+        background-color: #fff;
+        width: 32px;
+        height: 32px;
+        line-height: 35px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        margin: 2px;
+        z-index: 5;
+        cursor: pointer;
+        /*padding:10px;*/
+    }
+
+        .pin div.options div.bottom-option a:hover {
+            color: #222;
+            background-color: #efefef;
+        }
+
+    .pin div.options div.bottom-option div.lft a:hover {
+        color: #e60023
+    }
+
+    .pin div.options div.bottom-option div.rt a:nth-child(1) {
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+
+
+    .pin div.options div.bottom-option div.rt a:nth-child(3) {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        position: relative;
+    }
+
+.content ul.tooltipmore {
+    z-index: 1;
+    padding: 14px 5px;
+    width: 200px;
+    display: inline;
+    position: absolute;
+    top: 30px;
+    color: #000000;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+    opacity: 1;
+    overflow: auto;
+    white-space: unset;
+    margin: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 40px;
+    display: none;
+}
+
+    .content ul.tooltipmore li {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+        .content ul.tooltipmore li:hover {
+            background-color: #efefef;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+@media (min-width:320px) and (max-width:479px) {
+    .content .pin {
+        width: calc(49.999999% - 10px) !important;
+    }
+
+    .pin div.options div.bottom-option div.col-9 a:nth-child(1) {
+        display: none;
+    }
+
+    .content ul.tooltipmore {
+        font-size: 13px;
+        line-height: 30px;
+    }
+
+    .infoBoard {
+        width: 90%;
+    }
+
+        .infoBoard div.logo {
+            width: 60px;
+            height: 60px;
+        }
+
+            .infoBoard div.logo img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .infoBoard div.logo:before {
+                width: 60px;
+                height: 60px;
+            }
+
+        .infoBoard h3 {
+            margin-bottom: 20px;
+        }
+
+    .navigationbar {
+        position: fixed;
+        left: 15px !important;
+        right: 0 !important;
+        width: 100%;
+        transform: unset !important;
+        border-radius: 0 !important;
+        border-top: 1px solid #dee2e6 !important;
+    }
+
+    header div.bgoverlay {
+        display: none
+    }
+
+    header div.search-expand {
+        top: 100px;
+        z-index: 10;
+        padding: 10px !important
+    }
+
+        header div.search-expand ul.result li {
+            padding: 20px 10px !important;
+        }
+
+    .pin div.options .boards b {
+        display: none;
+    }
+
+    .pin div.options .boards {
+        background-color: unset;
+    }
+}
+
+@media (max-width:320px) {
+    .pin div.options div.bottom-option div.col-10 a:nth-child(1) {
+        display: none;
+    }
+
+    .content ul.tooltipmore {
+        font-size: 13px;
+        line-height: 30px;
+    }
+
+    .navigationbar {
+        position: fixed;
+        left: 15px !important;
+        right: 0 !important;
+        width: 100%;
+        transform: unset !important;
+        border-radius: 0 !important;
+        border-top: 1px solid #dee2e6 !important;
+    }
+
+    header div.search-expand {
+        top: 100px;
+        z-index: 10;
+        padding: 10px !important
+    }
+
+    header div.bgoverlay {
+        display: none
+    }
+
+    header div.search-expand ul.result {
+        max-height: calc(100vh - 200px);
+        overflow-y: scroll;
+    }
+
+        header div.search-expand ul.result li {
+            padding: 20px 10px !important;
+        }
+
+    .pin div.options .boards b {
+        display: none;
+    }
+
+    .pin div.options .boards {
+        background-color: unset;
+    }
+}
+
+@media (min-width:480px) and (max-width:599px) {
+    .content .pin {
+        width: calc(49.999999% - 10px) !important;
+    }
+
+    .content ul.tooltipmore {
+        font-size: 13px;
+        line-height: 30px;
+    }
+
+    .infoBoard {
+        width: 90%;
+    }
+
+        .infoBoard div.logo {
+            width: 60px;
+            height: 60px;
+        }
+
+            .infoBoard div.logo img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .infoBoard div.logo:before {
+                width: 60px;
+                height: 60px;
+            }
+
+        .infoBoard h3 {
+            margin-bottom: 20px;
+        }
+
+    header div.search-expand {
+        top: 100px;
+        z-index: 10;
+    }
+
+    header div.bgoverlay {
+        display: none
+    }
+
+    header div.search-expand ul.result {
+        max-height: calc(100vh - 200px);
+        overflow-y: scroll;
+    }
+
+        header div.search-expand ul.result li {
+            padding: 20px 10px !important;
+        }
+
+    .pin div.options .boards {
+        background-color: unset;
+    }
+
+        .pin div.options .boards b {
+            display: none;
+        }
+}
+
+@media (min-width:600px) and (max-width:800px) {
+    .content .pin {
+        width: calc(33.3333333% - 10px) !important;
+    }
+
+    .infoBoard {
+        width: 90%;
+    }
+
+        .infoBoard div.logo {
+            width: 60px;
+            height: 60px;
+        }
+
+            .infoBoard div.logo img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .infoBoard div.logo:before {
+                width: 60px;
+                height: 60px;
+            }
+
+        .infoBoard h3 {
+            margin-bottom: 20px;
+        }
+
+    header div.search-expand {
+        top: 100px;
+        z-index: 10;
+    }
+
+        header div.search-expand ul.result {
+            max-height: calc(100vh - 200px);
+            overflow-y: scroll;
+        }
+
+            header div.search-expand ul.result li {
+                padding: 20px 10px !important;
+            }
+
+    header div.bgoverlay {
+        display: none
+    }
+}
+
+@media (min-width:801px) and (max-width:1024px) {
+    .content .pin {
+        width: calc(24.9999999% - 10px) !important;
+    }
+
+    .infoBoard h1 a {
+        display: inline-block !important;
+    }
+}
+
+@media (min-width:1025px) and (max-width:1439px) {
+    /*.content .pin {
+        width: calc(24.9999999999% - 10px) !important;
+    }*/
+
+    .infoBoard h1 a {
+        display: inline-block !important;
+    }
+}
+
+@media (min-width:1440px) {
+    .content .pin {
+    }
+
+    .infoBoard h1 a {
+        display: inline-block !important;
+    }
+}
+
+
+
+.card_pin {
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    /*min-height: 330px;*/
+    flex-direction: unset !important;
+    text-align: right;
+    height: 300px;
+    border: solid 1px #f5f5f5 !important;
+    border-radius: 15px;
+}
+
+    .card_pin:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0,0,0,0), rgba(241, 241, 241, 0.25), rgba(0,0,0,0));
+        transform: translateX(-100%);
+        animation: loading 1.5s infinite;
+        top: 0;
+        left: 0;
+        border-radius: 15px;
+    }
+
+    .card_pin .card_pin__image {
+        position: relative;
+        width: 100%;
+        height: 70%;
+        min-height: 140px;
+        margin: 0px 0px;
+        overflow: hidden;
+        float: unset;
+        display: inline-block;
+        border-radius: 0;
+    }
+
+    .card_pin .card_pin__tags {
+        margin: 1px;
+        height: 15px;
+        width: 100%;
+        text-align: right;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+        .card_pin .card_pin__tags ul {
+            margin: 0 !important
+        }
+
+            .card_pin .card_pin__tags ul li {
+                display: inline-block;
+                clear: both;
+                padding: 5px 10px;
+                border-radius: 30px;
+                margin: 2px;
+                background-color: #efefef;
+                color: #222;
+                font-size: 13px;
+                width: 50px;
+            }
+
+    .card_pin .card_pin__title p {
+        height: 25px;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.39);
+        border-radius: 15px;
+    }
+
+@-moz-keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@-o-keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.container-fluid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    overflow-y: hidden;
+}
+
+.navigationbar {
+    position: fixed;
+    z-index: 3;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    font-size: 25px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.07);
+}
+
+    .navigationbar a {
+        width: 20%;
+        min-width: 50px;
+        text-align: center;
+        color: #767676 !important;
+        position: relative;
+    }
+
+        .navigationbar a.active {
+            color: #000000 !important;
+        }
+
+        .navigationbar a:nth-child(4) p {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #e60023;
+            color: #fff;
+            padding: 3px 7px !important;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+
+header div#search.show {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 2;
+    padding-top: 20px;
+}
+
+
+    header div#search.show input[type=search] {
+        /*width: 70%;*/
+    }

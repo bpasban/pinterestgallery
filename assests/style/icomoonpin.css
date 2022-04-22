@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "pinicomoon";
+  src: url("../font/");
+  src: url("../font//pinicomoon.eot?dfw58k#iefix") format("embedded-opentype"),
+    url("../font//pinicomoon.ttf?dfw58k") format("truetype"),
+    url("../font//pinicomoon.woff?dfw58k") format("woff"),
+    url("../font//pinicomoon.svg?dfw58k#pinicomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "pinicomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pinterest:before {
+  content: "\e916";
+}
+.icon-question:before {
+  content: "\e90a";
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-twitter:before {
+  content: "\e901";
+}
+.icon-mail:before {
+  content: "\e900";
+}
+.icon-whatsapp:before {
+  content: "\e902";
+}
+.icon-pin:before {
+  content: "\e915";
+}
+.icon-clear:before {
+  content: "\e914";
+}
+.icon-message:before {
+  content: "\e913";
+}
+.icon-favorite:before {
+  content: "\e912";
+}
+.icon-dashboard:before {
+  content: "\e911";
+}
+.icon-download:before {
+  content: "\e904";
+}
+.icon-report:before {
+  content: "\e905";
+}
+.icon-keyback:before {
+  content: "\e906";
+}
+.icon-copy:before {
+  content: "\e907";
+}
+.icon-more:before {
+  content: "\e908";
+}
+.icon-share:before {
+  content: "\e909";
+}
+.icon-add:before {
+  content: "\e90b";
+}
+.icon-arrow_down:before {
+  content: "\e90c";
+}
+.icon-home:before {
+  content: "\e90d";
+}
+.icon-search:before {
+  content: "\e90e";
+}
+.icon-notifications:before {
+  content: "\e90f";
+}
+.icon-person:before {
+  content: "\e910";
+}
