@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pinterest</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://s.pinimg.com/webapp/favicon-54a5b2af.png"
+    />
+    <link href="./assests/style/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assests/style/main.css" rel="stylesheet" />
+    <link href="./assests/style/icomoonpin.css" rel="stylesheet" />
+    <script src="./assests/js/jquery-3.3.1.min.js"></script>
+    <script src="./assests/js/popper.min.js"></script>
+    <script src="./assests/js/bootstrap.min.js"></script>
+    <script src="./assests/js/main.js"></script>
+    <script src="./assests/js/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="https://www.color-blindness.com/color-name-hue-tool/js/ntc.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div
+        class="navigationbar row p-3 d-lg-none d-xl-none d-md-flex d-sm-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+      >
+        <a class="active"><i class="icon-home"></i></a>
+        <a onclick="showsearchbox()"><i class="icon-search"></i></a>
+        <a><i class="icon-add"></i></a>
+        <a>
+          <i class="icon-message"></i>
+          <p>+99</p>
+        </a>
+        <a><i class="icon-person"></i></a>
+      </div>
+      <header class="row">
+        <div
+          class="w-100 d-lg-flex d-xl-flex d-md-none d-sm-none d-none p-3 border-bottom flex-wrap align-items-center justify-content-center justify-content-lg-start largedevice"
+        >
+          <div class="col home">
+            <a class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0">
+              <i class="icon-pinterest"></i>
+              <p>Home</p>
+            </a>
+          </div>
+          <div
+            class="col-8 col-md-6 col-lg-6 col-xl-7 position-relative"
+            id="search"
+          >
+            <input
+              type="search"
+              onfocusout="onfocusoutsearch()"
+              onfocus="onfocussearch(this)"
+              id="txtsearch"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            /><i class="icon-search"></i
+            ><a class="clear"><i class="icon-clear"></i></a>
+            <div class="search-expand d-flex"></div>
+          </div>
+          <div class="col">
+            <ul class="nav col-12 col-lg-auto flex-row-reverse p-0 navigation">
+              <li>
+                <a class="d-flex align-items-center col-lg-4"
+                  ><i class="icon-person"></i><i class="icon-arrow_down"></i
+                ></a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center col-lg-4"
+                  ><i class="icon-message"></i
+                ></a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center col-lg-4">
+                  <i class="icon-notifications"></i>
+                  <p>+99</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="d-lg-none d-xl-none d-md-flex d-sm-flex d-flex w-100 w-100 p-3 border-bottom flex-wrap align-items-center justify-content-center justify-content-lg-start smalldevice"
+        >
+          <div class="col-3 col-md-3 col-sm-3 text-left pl-0">
+            <a class="back ml-0"><i class="icon-arrow_down"></i></a>
+          </div>
+          <div class="col-9 col-md-9 col-sm-9 text-right">
+            <ul class="navbar-nav flex-row float-right">
+              <li class="nav-item">
+                <a class="more"><i class="icon-more"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="followbtnlg">Follow</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 d-none" id="search">
+            <div
+              class="row align-items-center justify-content-center justify-content-lg-start"
+            >
+              <div class="position-relative col-9">
+                <input
+                  type="search"
+                  onfocusout="onfocusoutsearch()"
+                  id="txtsearchsmall"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                /><i class="icon-search"></i
+                ><a class="clear"><i class="icon-clear"></i></a>
+              </div>
+              <div class="position-relative col-3 text-right">
+                <a class="cancel pr-3" onclick="hidesearchbox()">cancel</a>
+              </div>
+            </div>
+            <div class="search-expand d-flex w-100"></div>
+          </div>
+        </div>
+      </header>
+      <div class="infoBoard">
+        <h1>
+          Handbags<a class="d-md-none d-sm-none d-none d-lg-block d-xl-block"
+            ><i class="icon-more"></i
+          ></a>
+        </h1>
+        <h6>
+          The perfect handbags from totes, cross-body bags, satchels to clutches
+          to complement your wardrobe (and beyond).
+        </h6>
+        <div class="logo">
+          <img
+            src="https://www.barghkaron.com/assests/common/img/cabiClothving.jpg"
+          />
+        </div>
+        <h3>cabi Clothving</h3>
+        <a class="followbtn d-md-none d-sm-none d-none d-lg-block d-xl-block"
+          >Follow</a
+        >
+      </div>
+      <div class="content row"></div>
+    </div>
+  </body>
+</html>
